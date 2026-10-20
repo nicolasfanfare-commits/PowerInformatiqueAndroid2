@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08254b">
+<title>Power Informatique</title>
+<style>
+:root{--navy:#08254b;--blue:#0878d1;--pale:#eef6ff;--ink:#172b46;--muted:#607087;--line:#dce7f2}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#f5f8fc}
+header{background:linear-gradient(135deg,#061b38,#0a4f8e);color:#fff;padding:22px 18px 25px;border-radius:0 0 24px 24px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:25px;font-weight:900}
+h1{font-size:21px;margin:0}header p{margin:6px 0 0;color:#dbeeff;font-size:14px}
+main{padding:16px;max-width:760px;margin:auto}.search{display:block;width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:14px;margin:0 0 16px;font-size:15px}
+h2{font-size:19px;margin:22px 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 3px 12px #12345a0a}
+.icon{width:40px;height:40px;border-radius:12px;background:var(--pale);display:grid;place-items:center;font-size:22px;margin-bottom:9px}
+.card h3{font-size:15px;margin:0 0 5px}.card p{font-size:13px;color:var(--muted);margin:0;line-height:1.45}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.btn{display:block;text-align:center;padding:13px 10px;border-radius:12px;background:var(--blue);color:white;text-decoration:none;font-weight:700;font-size:14px;border:0}
+.btn.alt{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.notice{background:#e9f5ff;border-left:4px solid var(--blue);padding:12px 14px;border-radius:10px;font-size:13px;line-height:1.5}
+.guide{padding:13px 0;border-bottom:1px solid var(--line)}.guide strong{display:block;font-size:14px}.guide span{font-size:13px;color:var(--muted)}
+form{display:grid;gap:10px}input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:#fff;font:inherit;font-size:14px}textarea{min-height:88px;resize:vertical}
+footer{text-align:center;padding:24px 16px 35px;color:var(--muted);font-size:12px}
+nav{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:10px 3px calc(10px + env(safe-area-inset-bottom));z-index:5}
+nav a{color:var(--navy);font-size:11px;text-decoration:none;text-align:center;font-weight:700}
+section{scroll-margin-top:12px}.small{font-size:12px;color:var(--muted)}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}main{padding:22px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">P</div><div><h1>Power Informatique</h1><p>Votre partenaire informatique au quotidien</p></div></div>
+</header>
+<main>
+ <input class="search" id="search" placeholder="Rechercher un service ou un conseil…" aria-label="Rechercher">
+ <section id="accueil">
+  <div class="notice"><strong>Bienvenue !</strong><br>Retrouvez nos services, des conseils pratiques et des moyens rapides pour nous contacter.</div>
+  <div class="actions"><a class="btn" href="#devis">Demander un devis</a><a class="btn alt" href="#contact">Nous contacter</a></div>
+ </section>
+ <section id="services">
+  <h2>Nos services</h2>
+  <div class="grid searchable">
+   <article class="card"><div class="icon">🛠️</div><h3>Dépannage informatique</h3><p>Diagnostic et aide pour vos problèmes matériels ou logiciels.</p></article>
+   <article class="card"><div class="icon">🧰</div><h3>Maintenance</h3><p>Entretien, mises à jour et optimisation de votre ordinateur.</p></article>
+   <article class="card"><div class="icon">🛡️</div><h3>Sécurité numérique</h3><p>Bonnes pratiques pour protéger vos comptes et vos données.</p></article>
+   <article class="card"><div class="icon">📶</div><h3>Réseau & connexion</h3><p>Aide à la configuration Wi-Fi, périphériques et connexion.</p></article>
+   <article class="card"><div class="icon">🌐</div><h3>Création de site web</h3><p>Présentation de votre activité et présence en ligne.</p></article>
+   <article class="card"><div class="icon">🎬</div><h3>Création vidéo</h3><p>Idées de contenus et services audiovisuels à confirmer.</p></article>
+  </div>
+ </section>
+ <section id="conseils">
+  <h2>Conseils & tutoriels</h2>
+  <div class="card searchable">
+   <div class="guide"><strong>🔐 Créer un mot de passe solide</strong><span>Utilisez une phrase longue et unique. Activez l'authentification à deux facteurs quand c'est possible.</span></div>
+   <div class="guide"><strong>🎣 Repérer un e-mail frauduleux</strong><span>Vérifiez l'adresse de l'expéditeur, méfiez-vous de l'urgence et n'ouvrez pas les pièces jointes inattendues.</span></div>
+   <div class="guide"><strong>💾 Sauvegarder ses fichiers</strong><span>Conservez une copie sur un support séparé ou un service de sauvegarde fiable et testez la restauration.</span></div>
+   <div class="guide"><strong>🔄 Garder ses appareils à jour</strong><span>Installez les mises à jour système et navigateur depuis les paramètres officiels.</span></div>
+  </div>
+ </section>
+ <section id="securite">
+  <h2>Sécurité informatique</h2>
+  <div class="card"><p>En cas de doute, ne communiquez jamais vos mots de passe ni vos codes de validation. Si vous pensez avoir été victime d'une arnaque, contactez votre banque ou le service concerné par un canal officiel.</p></div>
+ </section>
+ <section id="devis">
+  <h2>Demande de devis</h2>
+  <div class="card">
+   <form id="quoteForm">
+    <input name="nom" placeholder="Votre nom" required>
+    <input name="email" type="email" placeholder="Votre e-mail" required>
+    <input name="telephone" type="tel" placeholder="Téléphone (facultatif)">
+    <select name="service"><option>Dépannage informatique</option><option>Maintenance</option><option>Sécurité informatique</option><option>Réseau / connexion</option><option>Création de site web</option><option>Autre demande</option></select>
+    <textarea name="message" placeholder="Décrivez votre besoin" required></textarea>
+    <button class="btn" type="submit">Préparer ma demande</button>
+    <p class="small">Cette version prépare un e-mail sur votre appareil. Aucune demande n'est envoyée automatiquement.</p>
+   </form>
+  </div>
+ </section>
+ <section id="rendezvous">
+  <h2>Prendre rendez-vous</h2>
+  <div class="card">
+   <form id="appointmentForm">
+    <input name="nom" placeholder="Votre nom" required>
+    <input name="email" type="email" placeholder="Votre e-mail" required>
+    <select name="type"><option>Dépannage</option><option>Conseil avant achat</option><option>Installation / configuration</option><option>Autre</option></select>
+    <label class="small">Date souhaitée<input name="date" type="date" required></label>
+    <label class="small">Créneau préféré<select name="heure"><option>Matin</option><option>Après-midi</option><option>Fin de journée</option></select></label>
+    <textarea name="message" placeholder="Informations complémentaires"></textarea>
+    <button class="btn" type="submit">Préparer ma demande de rendez-vous</button>
+    <p class="small">Le rendez-vous n'est pas confirmé tant que l'entreprise ne vous a pas répondu.</p>
+   </form>
+  </div>
+ </section>
+ <section id="client">
+  <h2>Espace client</h2>
+  <div class="card"><div class="icon">👤</div><h3>Votre suivi client</h3><p>Un espace sécurisé pourrait permettre de retrouver devis, rendez-vous, documents et demandes d'assistance.</p><p class="small" style="margin-top:8px">Fonction à connecter à un service sécurisé avant publication : aucun compte ni dossier client n'est géré dans ce prototype.</p></div>
+ </section>
+ <section id="contact">
+  <h2>Contact rapide</h2>
+  <div class="grid">
+   <a class="card" href="mailto:contact@power-informatique.com" style="text-decoration:none;color:inherit"><div class="icon">✉️</div><h3>E-mail</h3><p>Préparer un message</p></a>
+   <a class="card" href="https://power-informatique.com" style="text-decoration:none;color:inherit"><div class="icon">🌍</div><h3>Site web</h3><p>Visiter le site officiel</p></a>
+  </div>
+  <p class="small">L'adresse e-mail ci-dessus est indicative et doit être confirmée avant publication.</p>
+ </section>
+ <footer>Power Informatique · Prototype de démonstration<br>Contenu et coordonnées à valider avant diffusion.</footer>
+</main>
+<nav>
+ <a href="#accueil">⌂<br>Accueil</a><a href="#services">⚙<br>Services</a><a href="#conseils">▤<br>Conseils</a><a href="#devis">✎<br>Devis</a><a href="#contact">☎<br>Contact</a>
+</nav>
+<script>
+const mail = "contact@power-informatique.com"; // À confirmer avant publication.
+function formToMail(form, subject) {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const lines = [];
+    for (const [k,v] of data.entries()) lines.push(k + " : " + v);
+    const url = "mailto:" + mail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+    window.location.href = url;
+  });
+}
+formToMail(document.getElementById('quoteForm'), 'Demande de devis - Power Informatique');
+formToMail(document.getElementById('appointmentForm'), 'Demande de rendez-vous - Power Informatique');
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('.searchable .card, .searchable article').forEach(el => {
+    el.style.display = !q || el.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
